@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="340" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fa34203f-d896-4016-8c66-d135cc67e0c8">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="2"/>
+	<property name="ireport.y" value="443"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="invo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     feetbl.`mid` AS feetbl_mid,
+     feetbl.`mname` AS feetbl_mname,
+     feetbl.`mclass` AS feetbl_mclass,
+     feetbl.`bal` AS feetbl_bal,
+     feetbl.`lastpay` AS feetbl_lastpay,
+     feetbl.`date` AS feetbl_date
+FROM
+     `feetbl` feetbl
+WHERE
+     feetbl.`mid` = $P{invo}]]>
+	</queryString>
+	<field name="feetbl_mid" class="java.lang.String"/>
+	<field name="feetbl_mname" class="java.lang.String"/>
+	<field name="feetbl_mclass" class="java.lang.String"/>
+	<field name="feetbl_bal" class="java.lang.String"/>
+	<field name="feetbl_lastpay" class="java.lang.String"/>
+	<field name="feetbl_date" class="java.lang.String"/>
+	<group name="table">
+		<groupExpression><![CDATA[$F{feetbl_mid}]]></groupExpression>
+		<groupHeader>
+			<band height="128">
+				<staticText>
+					<reportElement x="21" y="5" width="68" height="20" uuid="c6e211e7-123c-4a4a-abd9-091cbb4dabe1"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Student ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="117" y="5" width="100" height="20" uuid="08b46342-3e73-4a9f-9260-d01aa9d1d07b"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Student Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="242" y="5" width="62" height="20" uuid="535cd586-28b4-4868-b764-9f2593e424a2"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Class]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="314" y="5" width="100" height="20" uuid="8be0d587-7395-4983-b984-504f582afdd7"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Amount Paid]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="427" y="5" width="100" height="20" uuid="94886bf4-9fa7-413f-bd6f-b028d391184d"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Balance]]></text>
+				</staticText>
+				<line>
+					<reportElement x="18" y="0" width="519" height="1" uuid="a097e66c-38e1-4d1b-8a13-19cb51df0983"/>
+				</line>
+				<line>
+					<reportElement x="18" y="1" width="1" height="66" uuid="9036e71b-035f-4f81-a37c-75265e903b65"/>
+				</line>
+				<line>
+					<reportElement x="19" y="25" width="517" height="1" uuid="c5404326-da2a-416d-b8c3-fc99f67bd375"/>
+				</line>
+				<line>
+					<reportElement x="536" y="1" width="1" height="67" uuid="c1d4943b-040c-45eb-a4ef-9d1463f6616c"/>
+				</line>
+				<line>
+					<reportElement x="110" y="0" width="1" height="46" uuid="f97b9408-4714-463b-a71d-7e4050f2fe0a"/>
+				</line>
+				<line>
+					<reportElement x="230" y="1" width="1" height="46" uuid="29433f4f-cd6f-4a0f-a91b-9bc89455590b"/>
+				</line>
+				<line>
+					<reportElement x="303" y="0" width="1" height="47" uuid="97ce6504-78c9-4111-8302-b58ecdc361e4"/>
+				</line>
+				<line>
+					<reportElement x="413" y="1" width="1" height="46" uuid="f478f50b-50b5-4914-9a35-f2aa1e7c4933"/>
+				</line>
+				<textField>
+					<reportElement x="21" y="26" width="76" height="20" uuid="5905a977-f12b-45ed-8e83-a74b6efae3a2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{feetbl_mid}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="117" y="26" width="99" height="20" uuid="5f64a710-e585-4911-9125-6371a82e94f0"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{feetbl_mname}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="242" y="26" width="49" height="20" uuid="a7943685-97ff-466a-8b12-f84a68aa40cb"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{feetbl_mclass}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="427" y="26" width="100" height="20" uuid="879a3185-414c-45e2-8879-b38f78564ea6"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{feetbl_bal}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="314" y="26" width="89" height="20" uuid="4414e62f-0e10-41f8-b9cd-1cc02a1f5767"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{feetbl_lastpay}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="18" y="46" width="519" height="1" uuid="4c61b8fc-56ae-4d45-abf3-465984f0e50f"/>
+				</line>
+				<staticText>
+					<reportElement x="256" y="46" width="47" height="20" uuid="72fb73b1-26f8-46bd-b635-ddd772008f6b"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="314" y="46" width="100" height="20" uuid="8d076a4b-ef64-4460-8680-f3b7cc7603b3"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{feetbl_lastpay}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="18" y="67" width="519" height="1" uuid="4ef92eba-36b3-438a-b535-b8a8134194b5"/>
+				</line>
+				<staticText>
+					<reportElement x="16" y="83" width="24" height="13" uuid="0bbfd99d-7256-41db-8f28-f9a60d9fd3bb"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NOTE: ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="18" y="109" width="518" height="1" uuid="76beaef3-a4aa-4f83-a3ca-1288b13b4b76"/>
+				</line>
+				<staticText>
+					<reportElement x="40" y="97" width="216" height="13" uuid="8bc2f7d0-6fe7-4ffc-ac5e-f34e468c06a8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[THIS RECEIPT IS INVALID WITHOUT AN AUTHORISED SCHOOL STAMP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="97" y="109" width="86" height="13" uuid="2ad311dd-d3c6-4360-83e6-0285e8696ce6"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Designed LiqTeQ Company. ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="183" y="110" width="264" height="13" uuid="807fb4fb-e831-4fd2-96c1-f82b762bd19b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Contact us on 0757873918 and visit our website at WWW.LiqTeQ.com]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="40" y="84" width="198" height="13" uuid="a01784ac-de91-48a2-9de5-9c316b4d777c"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[FEES ONCE PAID ARE NON REFUNDABLE]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="5"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="10" width="360" height="45" uuid="7e118a0b-de64-46e3-b0cb-28355eade764"/>
+				<textElement>
+					<font fontName="Serif" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EDGER PRIMARY SCHOOL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="131" y="40" width="340" height="1" uuid="657747ed-e161-408d-a5c1-cd41ceefbbb0"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="53" y="0" width="64" height="64" uuid="8af513e5-f72d-4d9f-927e-15feebf22e27"/>
+				<imageExpression><![CDATA["C:\\Users\\Dell\\Desktop\\java work\\Projects\\EdgerPrimarySchool\\src\\icons\\logo1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="183" y="0" width="211" height="35" uuid="eafbdd39-3dc3-4e16-a925-0acab420d13f"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TUITION RECEIPT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="47" width="42" height="16" uuid="965853de-e231-4207-bf37-9a18bac92f02"/>
+				<textElement>
+					<font fontName="Century" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="47" width="135" height="16" uuid="458f01ea-d3c9-409f-b46c-e200be51ba67"/>
+				<textElement>
+					<font fontName="Monospaced" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{feetbl_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="73" width="91" height="14" uuid="08235716-f13a-40f0-893c-e78c66e93c1c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Details]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="86" width="77" height="1" uuid="498e5341-ddee-46f7-a2bc-8516423cf8d5"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="708" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b9430ae-c7a1-4b1e-934f-376b252cd424">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1275"/>
+	<parameter name="invo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     results.`ridd` AS results_ridd,
+     results.`rname` AS results_rname,
+     results.`math` AS results_math,
+     results.`grade` AS results_grade,
+     results.`science` AS results_science,
+     results.`sgrade` AS results_sgrade,
+     results.`eng` AS results_eng,
+     results.`egrade` AS results_egrade,
+     results.`sst` AS results_sst,
+     results.`ssgrade` AS results_ssgrade,
+     results.`totaMark` AS results_totaMark,
+     results.`average` AS results_average,
+     results.`aggre` AS results_aggre,
+     results.`Division` AS results_Division,
+     results.`classR` AS results_classR
+FROM
+     `results` results
+where
+results.`ridd`  = $P{invo}]]>
+	</queryString>
+	<field name="results_ridd" class="java.lang.String"/>
+	<field name="results_rname" class="java.lang.String"/>
+	<field name="results_math" class="java.lang.String"/>
+	<field name="results_grade" class="java.lang.String"/>
+	<field name="results_science" class="java.lang.String"/>
+	<field name="results_sgrade" class="java.lang.String"/>
+	<field name="results_eng" class="java.lang.String"/>
+	<field name="results_egrade" class="java.lang.String"/>
+	<field name="results_sst" class="java.lang.String"/>
+	<field name="results_ssgrade" class="java.lang.String"/>
+	<field name="results_totaMark" class="java.lang.String"/>
+	<field name="results_average" class="java.lang.String"/>
+	<field name="results_aggre" class="java.lang.String"/>
+	<field name="results_Division" class="java.lang.String"/>
+	<field name="results_classR" class="java.lang.String"/>
+	<group name="details&amp;table">
+		<groupExpression><![CDATA[$F{results_ridd}]]></groupExpression>
+		<groupFooter>
+			<band height="310">
+				<line>
+					<reportElement x="64" y="0" width="449" height="1" uuid="2beba9c0-4a8c-4921-9146-b9758193e056"/>
+				</line>
+				<line>
+					<reportElement x="64" y="1" width="1" height="160" uuid="604129c6-faf4-4bb1-8568-69dc86668661"/>
+				</line>
+				<line>
+					<reportElement x="354" y="0" width="1" height="161" uuid="99b2396f-cef9-4fc4-8335-68517670dfcf"/>
+				</line>
+				<line>
+					<reportElement x="192" y="1" width="1" height="160" uuid="e7512679-2edc-4e10-8c1d-57dd9b02f179"/>
+				</line>
+				<line>
+					<reportElement x="512" y="0" width="1" height="162" uuid="a4c79e39-22da-4f68-bd27-7b60d3b26f5b"/>
+				</line>
+				<staticText>
+					<reportElement x="78" y="1" width="100" height="19" uuid="db74efc7-2ede-44ee-9044-2caee60c3b40"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[SUBJECT]]></text>
+				</staticText>
+				<line>
+					<reportElement x="65" y="20" width="447" height="1" uuid="de15beaf-531d-419d-9eac-0f4059fc5e1f"/>
+				</line>
+				<staticText>
+					<reportElement x="236" y="2" width="100" height="19" uuid="40a19075-8141-493f-9b8e-aa109ecd3257"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[SCORE(in %)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="406" y="0" width="42" height="19" uuid="63fa6fe6-faa3-47a0-8da1-d66866a54670"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[GRADE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="78" y="21" width="100" height="19" uuid="f9f83ecd-7ad6-4ae0-ab2f-b966df5cc38c"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[English]]></text>
+				</staticText>
+				<line>
+					<reportElement x="65" y="40" width="447" height="1" uuid="7ffecb61-2f49-450b-bd77-08e1e9ddde1a"/>
+				</line>
+				<staticText>
+					<reportElement x="78" y="41" width="100" height="19" uuid="c950734d-6104-480a-9cca-1d85367d43b5"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Mathematics]]></text>
+				</staticText>
+				<line>
+					<reportElement x="65" y="60" width="447" height="1" uuid="1d730f53-a586-4ad6-a32a-573afc6fba99"/>
+				</line>
+				<staticText>
+					<reportElement x="78" y="61" width="100" height="19" uuid="6e89a203-d579-4b65-8371-76c31c0a0cb9"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Science]]></text>
+				</staticText>
+				<line>
+					<reportElement x="65" y="80" width="447" height="1" uuid="05a3ee87-1615-4b37-8860-d4502d6ae9fc"/>
+				</line>
+				<staticText>
+					<reportElement x="78" y="81" width="100" height="19" uuid="544cbf33-adfa-49e3-936e-14046f1705d0"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[SST]]></text>
+				</staticText>
+				<line>
+					<reportElement x="64" y="100" width="449" height="1" uuid="1915a350-1692-4faa-8a98-a8a6e26210f0"/>
+				</line>
+				<staticText>
+					<reportElement x="78" y="111" width="100" height="19" uuid="287949be-0b4f-4530-a9d0-d34fb02bb790"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Average]]></text>
+				</staticText>
+				<line>
+					<reportElement x="65" y="130" width="447" height="1" uuid="ce10fb2f-5ed5-4804-99ab-f215832ca624"/>
+				</line>
+				<staticText>
+					<reportElement x="78" y="143" width="100" height="19" uuid="7ec34517-8e1f-4935-a00d-d575a6df14b6"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Score]]></text>
+				</staticText>
+				<line>
+					<reportElement x="64" y="161" width="448" height="1" uuid="4792356d-57b9-4f24-8739-8ba7640655cd"/>
+				</line>
+				<staticText>
+					<reportElement x="89" y="175" width="170" height="20" uuid="d1734fa4-4241-48f9-8ed9-1e2a6c8cd9a1"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Total Aggregates in All the Subjects  :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="313" y="175" width="42" height="20" uuid="5de1ed35-314a-4070-8beb-8bea6862375f"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Division :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="102" y="221" width="50" height="20" uuid="2342cfc8-914e-49dc-8067-b30e6c7ae8fc"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Grading :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="221" width="74" height="20" uuid="93ab606c-b909-4560-8914-c4e6cc08287a"/>
+					<text><![CDATA[D1 = 80 - 100]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="152" y="241" width="74" height="20" uuid="0aad53e6-40d2-485c-8462-4395ee15cbfa"/>
+					<text><![CDATA[D2 = 70 - 79]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="226" y="221" width="72" height="20" uuid="8a1b7129-2758-4184-b0ac-413b3d8c4cdf"/>
+					<text><![CDATA[C3 = 65 - 69]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="226" y="241" width="72" height="20" uuid="98cdc12e-7ab1-4421-afeb-2d976000fac6"/>
+					<text><![CDATA[C4 = 60 - 64]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="298" y="221" width="67" height="20" uuid="53c225bd-4003-49c6-ab23-cb5c064b1b2a"/>
+					<text><![CDATA[C5 = 55 - 59]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="298" y="241" width="67" height="20" uuid="b36a2896-3972-45aa-8e87-f09990ffdd93"/>
+					<text><![CDATA[C6 = 50 - 54]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="365" y="241" width="67" height="20" uuid="d7a65e40-8864-464d-9225-63cda336d3b1"/>
+					<text><![CDATA[P8 = 40 - 44]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="365" y="221" width="67" height="20" uuid="82b9e226-e210-4cfe-baf0-11ded9e7f246"/>
+					<text><![CDATA[P7 = 45 - 49]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="432" y="221" width="67" height="20" uuid="f33099d8-109e-4d97-b19f-7f87d5814a3e"/>
+					<text><![CDATA[F9 = 0 - 34]]></text>
+				</staticText>
+				<line>
+					<reportElement x="64" y="270" width="449" height="1" uuid="78654588-6a2a-4346-a1af-925e5d44001e"/>
+				</line>
+				<staticText>
+					<reportElement x="152" y="271" width="84" height="13" uuid="59989fac-649f-481f-a0fd-8543b0ae6915"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[Designed LiqTeQ Company. ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="236" y="270" width="196" height="13" uuid="409648fb-5096-4a30-8b04-67fbbe448e35"/>
+					<textElement verticalAlignment="Middle">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[Contact us on 0757873918 and visit our website at WWW.LiqTeQ.com]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="259" y="19" width="76" height="20" uuid="b5ba0036-86fa-4795-8884-6eeab45c282a"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_eng}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="259" y="39" width="76" height="20" uuid="dc75a83f-6e61-4f16-bd08-0dc4202c2524"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_math}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="259" y="59" width="76" height="20" uuid="5b3a952e-5f20-4fa5-b324-8c1e63fc119f"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_science}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="259" y="79" width="76" height="20" uuid="d5ac3427-44a5-4536-8065-355a11d9e576"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_sst}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="417" y="20" width="73" height="20" uuid="a383e709-4668-481e-a110-1beb2d90015e"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_egrade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="417" y="42" width="73" height="20" uuid="7345f4b5-1d53-450b-8e83-495924dfb5bb"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_grade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="417" y="62" width="73" height="20" uuid="61430a25-a306-4a13-932b-def373baa1f3"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_sgrade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="417" y="82" width="73" height="20" uuid="7301dc5c-201c-49cd-a89c-eb165cfa8ba1"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_ssgrade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="259" y="110" width="100" height="20" uuid="59110b3f-61a9-4c9f-a725-135bf9315fde"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_average}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="259" y="143" width="89" height="18" uuid="98f0ac70-95a3-4f2e-b584-5b89df77e2fe"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_totaMark}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="259" y="175" width="39" height="20" uuid="db401aba-1eb8-4cde-8b20-6335a71236e5"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_aggre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="355" y="175" width="42" height="20" uuid="fe2fe653-220b-44d9-8753-06ca9fb8add6"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{results_Division}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="77" splitType="Stretch">
+			<image>
+				<reportElement x="65" y="-1" width="64" height="64" uuid="a7fce084-bf85-4778-98b4-a7ba9094ec02"/>
+				<imageExpression><![CDATA["C:\\Users\\Dell\\Desktop\\java work\\Projects\\EdgerPrimarySchool\\src\\icons\\logo1.png"]]></imageExpression>
+			</image>
+			<elementGroup>
+				<line>
+					<reportElement x="140" y="47" width="340" height="1" uuid="5ebbe25d-36dc-4f27-a13e-1e096727b5f0"/>
+					<graphicElement>
+						<pen lineWidth="1.5"/>
+					</graphicElement>
+				</line>
+				<elementGroup>
+					<staticText>
+						<reportElement x="140" y="18" width="360" height="45" uuid="74e49f78-0855-4472-b20f-9db831a23a46"/>
+						<textElement>
+							<font fontName="Serif" size="26" isBold="true"/>
+						</textElement>
+						<text><![CDATA[EDGER PRIMARY SCHOOL]]></text>
+					</staticText>
+				</elementGroup>
+			</elementGroup>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="65" y="50" width="52" height="20" uuid="c7a70558-12f4-4310-ae08-d49fabcafa7e"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[NAME    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="70" width="52" height="20" uuid="4469569b-6750-4529-a426-2f656d669ed4"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ST. ID    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="90" width="52" height="20" uuid="843a511f-295d-442d-b35f-de351c195fe1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[CLASS   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="214" height="27" uuid="af502f91-88f3-4fa0-b52d-d18fd1fccbf0"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Academic Testimonial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="128" width="100" height="13" uuid="c1681a4a-2db2-46dd-a4c4-aca5746280c7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TABLE OF RESULTS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="65" y="140" width="100" height="1" uuid="2911e60b-1a37-4002-8392-fc586c10299b"/>
+			</line>
+			<textField>
+				<reportElement x="116" y="50" width="157" height="20" uuid="de2c00be-4faa-4630-afb2-72c32763bd4d"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{results_rname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="70" width="157" height="20" uuid="52cf15c7-a20e-4b0c-9c9b-0f4190a05caa"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{results_ridd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="90" width="143" height="20" uuid="10e5ebb2-9bf6-4a22-a850-e418ed3725a3"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{results_classR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="11" splitType="Stretch"/>
+	</summary>
+</jasperReport>

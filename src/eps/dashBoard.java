@@ -20,6 +20,9 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
+
+
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -2157,6 +2160,7 @@ public class dashBoard extends javax.swing.JFrame  {
             ha.put("invo", ssid);
             
             readFeeTable();
+           
             JasperDesign jd;
             try {
                 jd = JRXmlLoader.load("C:\\Users\\Dell\\Desktop\\java work\\Projects\\EdgerPrimarySchool\\src\\eps\\receipt.jrxml");
@@ -3135,6 +3139,7 @@ public class dashBoard extends javax.swing.JFrame  {
             HashMap hah = new HashMap();
             hah.put("invo", ssid);
             
+            // C:\Users\ADMIN\Desktop\java_work\Projects\EdgerPrimarySchool\src\eps\receipt.jrxml
             readFeeTable();
             JasperDesign jd2;
             try {
